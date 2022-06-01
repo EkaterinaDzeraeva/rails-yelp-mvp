@@ -1,18 +1,31 @@
-<div class = "container">
-  <div>
-    <h1>Restaurants</h1>
-  </div>
-   <% @restaurants.each do |restaurant| %>
-    <%= link_to restaurant_path(restaurant) do %>
-      <div>
-          <p><%= restaurant.name %></p>
-          <p><%= restaurant.address %></p>
-          <p><%= restaurant.phone_number %></p>
-          <p><%= restaurant.category %></p>
+<div class="container">
+    <div>
+      <h1>Restaurants</h1>
+    </div>
+    <% @restaurants.each do |restaurant| %>
+      <%# <%= link_to restaurant_path(restaurant) do %>
+        <div class="card-restaurant margin-bottom">
+            <img src="https://source.unsplash.com/random" alt="Card restaurant image">
+            <div>
+              <p>Name: <%= restaurant.name %></p>
+              <p> Address: <%= restaurant.address %></p>
+              <p>Contact: <%= restaurant.phone_number %></p>
+              <p> Category: <%= restaurant.category %></p>
+              <div class="button">
+              <%= link_to "More details", restaurant_path(restaurant) %>
+              </div>
+            </div>
 
-      </div>
+        </div>
+      <%# <% end %>
     <% end %>
-  <% end %>
 
-<%= link_to "Add a new restaurant", new_restaurant_path %>
+  <%= link_to "Add a new restaurant", new_restaurant_path %>
 </div>
+
+<%# <div class="card-product margin-bottom">
+        <img src="https://source.unsplash.com/random" alt="Card product image">
+        <div class="info">
+          <h2>Product name</h2>
+          <p>Product description with <strong>relevant info</strong> only.</p>
+        </div> %>

@@ -14,3 +14,36 @@
  *= require_self
  */
  @import "bootstrap/scss/bootstrap";
+ body {
+  margin: 100px;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+}
+ .container{
+  width:450px;
+  margin:0 auto;
+}
+.margin-bottom{
+  margin-bottom: 15px;
+}
+.button {
+  text-decoration: none !important;
+  font-weight: 400;
+}
+
+.card-restaurant{
+  display: flex;
+  align-items: center;
+  height: 250px;
+  width: 450px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.20);
+  border-radius: 5px;
+}
+.card-restaurant img{
+  height: 100%;
+  width:130px;
+  object-fit: cover;
+}
