@@ -1,0 +1,14 @@
+<h1>New Restaurant</h1>
+
+<%= simple_form_for(@restaurant) do |f| %>
+
+<div class="form-inputs">
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :category, :collection => ["chinese", "italian", "japanese", "french", "belgian"], :prompt => "Select the category" %>
+</div>
+<div class="form_actions btn btn-primary">
+  <%= f.button :submit %>
+</div>
+<% end %>
